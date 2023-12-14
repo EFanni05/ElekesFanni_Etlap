@@ -1,0 +1,36 @@
+﻿<Window x:Class="Etlap.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Etlap"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="1,0,-1,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="111*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <ListBox x:Name="ListBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,10,10,10" Grid.Row="1"/>
+        <TextBox x:Name="EmelesSzazalekText" HorizontalAlignment="Left" Margin="10,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Height="18"/>
+        <Button x:Name="EmelesSzazalekButton" Content="Emeles" HorizontalAlignment="Left" Margin="175,47,0,0" VerticalAlignment="Top" Height="18" Click="EmelesSzazalek"/>
+        <Label Content="%" HorizontalAlignment="Left" Margin="145,44,0,0" VerticalAlignment="Top" Width="25"/>
+        <TextBox x:Name="EmelesForintText" HorizontalAlignment="Left" Margin="10,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Height="18"/>
+        <Button x:Name="EmelesForintButton" Content="Emeles" HorizontalAlignment="Left" Margin="175,78,0,0" VerticalAlignment="Top" Height="18" Click="EmelesForint"/>
+        <Label Content="Ft" HorizontalAlignment="Left" Margin="145,75,0,0" VerticalAlignment="Top" Width="25"/>
+        <TextBox x:Name="NameAdd" Grid.Column="1" HorizontalAlignment="Left" Margin="69,20,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="LeirasAdd" Grid.Column="1" HorizontalAlignment="Left" Margin="69,52,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="63"/>
+        <TextBox x:Name="TipusAdd" Grid.Column="1" HorizontalAlignment="Left" Margin="69,130,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="ArAdd" Grid.Column="1" HorizontalAlignment="Left" Margin="69,155,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="Add" Grid.Column="1" Content="Hozzáad" HorizontalAlignment="Left" Margin="69,190,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" Click="Add"/>
+        <Label Grid.Column="1" Content="Név" HorizontalAlignment="Left" Margin="10,16,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Grid.Column="1" Content="Leírás" HorizontalAlignment="Left" Margin="10,75,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Grid.Column="1" Content="Típus" HorizontalAlignment="Left" Margin="10,130,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Grid.Column="1" Content="Ár" HorizontalAlignment="Left" Margin="10,156,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Button x:Name="Delete" Grid.Column="1" Content="Törlés" HorizontalAlignment="Left" Margin="69,225,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" Click="Delete"/>
+    </Grid>
+</Window>
